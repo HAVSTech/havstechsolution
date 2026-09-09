@@ -15,13 +15,12 @@ const Navbar = () => {
     <nav className="fixed top-0 z-50 w-full border-b border-white/10 bg-[#06111f]/85 backdrop-blur-xl">
       <div className="mx-auto flex h-24 max-w-7xl items-center justify-between px-5 sm:px-7 lg:px-8">
         <a href="#home" className="flex items-center" aria-label="HAVS Tech Solutions home">
-          <span className="flex h-14 w-40 items-center overflow-hidden rounded-xl bg-white px-3 shadow-lg shadow-black/10 sm:h-16 sm:w-44">
-            <img
-              src="/favicon.ico"
-              alt="HAVS Tech Solutions"
-              className="h-full w-full object-contain"
-            />
-          </span>
+          <img
+            src="/favicon.ico"
+            alt="HAVS Tech Solutions"
+            className="h-12 w-auto max-w-[150px] object-contain mix-blend-screen sm:h-14"
+            style={{ filter: "invert(1) hue-rotate(180deg) saturate(1.1)" }}
+          />
         </a>
 
         <div className="hidden items-center gap-9 md:flex">

@@ -9,6 +9,12 @@ const AboutSection = () => {
     "Hands-on implementation and support",
   ];
 
+  const principles = [
+    { title: "Understand the problem", label: "We start with your business objective, users, systems, and constraints." },
+    { title: "Build the right solution", label: "We select practical technology and deliver a solution designed around your workflow." },
+    { title: "Support the outcome", label: "We stay involved through implementation, optimization, and future improvements." },
+  ];
+
   return (
     <section id="about" className="bg-white py-24 sm:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -38,22 +44,24 @@ const AboutSection = () => {
                 </div>
               ))}
             </div>
-
             <a href="#contact" className="mt-9 inline-flex items-center gap-2 font-semibold text-blue-600 hover:text-blue-700">Let's discuss your requirement <ArrowUpRight className="h-4 w-4" /></a>
           </div>
         </div>
 
-        <div className="mt-24 grid overflow-hidden rounded-[2rem] bg-slate-50 sm:grid-cols-3">
-          {[
-            { value: "Cloud", label: "Modern infrastructure & contact centers" },
-            { value: "AI", label: "Voice experiences & intelligent workflows" },
-            { value: "Build", label: "Software, websites & digital products" },
-          ].map((item) => (
-            <div key={item.value} className="border-b border-slate-200 p-8 last:border-0 sm:border-b-0 sm:border-r sm:last:border-r-0">
-              <p className="text-3xl font-semibold text-slate-950">{item.value}</p>
-              <p className="mt-2 text-sm leading-6 text-slate-500">{item.label}</p>
-            </div>
-          ))}
+        <div className="mt-24">
+          <div className="mb-10 max-w-2xl">
+            <p className="text-sm font-bold uppercase tracking-[0.2em] text-blue-600">Our way of working</p>
+            <h3 className="mt-3 text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl">A clear path from business challenge to measurable progress.</h3>
+          </div>
+          <div className="grid gap-4 md:grid-cols-3">
+            {principles.map((item, index) => (
+              <div key={item.title} className="rounded-3xl border border-slate-200 bg-slate-50 p-7">
+                <span className="text-sm font-bold text-blue-600">0{index + 1}</span>
+                <h4 className="mt-8 text-xl font-semibold text-slate-950">{item.title}</h4>
+                <p className="mt-3 text-sm leading-6 text-slate-600">{item.label}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

@@ -2,11 +2,12 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 
 export default function FAQ() {
   const faqs = [
-    ["What kinds of projects do you take on?", "We work across Amazon Connect, AI voice, n8n automation, custom software, websites, technology talent, IT consulting, and HR solutions. Scope and engagement model are shaped around the requirement."],
+    ["What kinds of business problems do you solve?", "We help businesses improve customer conversations, automate repetitive operations, connect existing systems, and build practical digital products. Our core capabilities include Amazon Connect, Voice AI, n8n automation, custom software, web development, technology talent, and IT consulting."],
     ["Can you integrate with our existing systems?", "Yes. We can work with APIs, cloud services, business applications, databases, and existing workflows to connect new solutions with the systems you already use."],
-    ["Do you support projects after launch?", "Yes. We can provide implementation support, troubleshooting, optimization, enhancements, and ongoing technical assistance based on your needs."],
+    ["Do you support projects after launch?", "Yes. We provide implementation support, troubleshooting, optimization, enhancements, and ongoing technical assistance. Support can also be structured as an ongoing HAVS Care engagement."],
     ["Can you work with an existing development or IT team?", "Absolutely. Our technology talent and consulting services can complement your internal team, fill skill gaps, or support delivery during periods of increased demand."],
-    ["How do we get started?", "Send us a short overview of your requirement through the contact form or email us. We can then understand the objective, discuss the best approach, and outline the next steps."],
+    ["Do you offer fixed packages or custom engagements?", "Both. We offer focused starting points for contact centers, Voice AI and workflow automation, while larger or unique requirements can be scoped as a custom engagement."],
+    ["How do we get started?", "Send us a short overview of your requirement through the contact form or email. We'll start with a discovery conversation to understand the objective, current process and best next step."],
   ];
 
   return (
@@ -15,6 +16,7 @@ export default function FAQ() {
         <div className="mb-12 text-center">
           <p className="text-sm font-bold uppercase tracking-[0.2em] text-blue-600">FAQ</p>
           <h2 className="mt-4 text-4xl font-semibold tracking-tight text-slate-950">Questions, answered clearly.</h2>
+          <p className="mx-auto mt-4 max-w-2xl text-slate-600">A few practical answers before we start working together.</p>
         </div>
         <Accordion type="single" collapsible className="space-y-3">
           {faqs.map(([question, answer], index) => (

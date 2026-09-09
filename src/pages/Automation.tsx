@@ -1,0 +1,4 @@
+import SolutionPage from "@/components/SolutionPage";
+
+const Automation = () => <SolutionPage eyebrow="Business automation" title="Turn repetitive work into connected workflows." description="Use n8n, APIs and system integrations to connect the tools your business already uses and automate the handoffs that slow your team down." capabilities={["Process discovery and mapping", "n8n workflow automation", "API integrations", "Data movement and transformation", "Notifications and approvals", "Monitoring and maintenance"]} outcomes={["Reduce repetitive manual tasks and avoid unnecessary handoffs.", "Move information between systems without constant copy-and-paste work.", "Give teams more consistent, visible processes.", "Build an automation foundation that can expand as your needs grow."]} />;
+export default Automation;

@@ -1,0 +1,4 @@
+import SolutionPage from "@/components/SolutionPage";
+
+const VoiceAI = () => <SolutionPage eyebrow="AI voice solutions" title="Make customer conversations more intelligent." description="Create natural voice experiences with conversational AI, voice automation and integrations designed around the way your customers and teams actually communicate." capabilities={["Voice agent design", "ElevenLabs integration", "Conversation workflows", "Business-system integrations", "Call automation", "Testing and optimization"]} outcomes={["Handle routine conversations consistently without adding manual workload.", "Create more natural voice interactions for customers and users.", "Automate handoffs between conversations and business workflows.", "Keep humans focused on complex interactions where they add the most value."]} />;
+export default VoiceAI;

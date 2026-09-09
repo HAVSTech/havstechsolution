@@ -1,0 +1,4 @@
+import SolutionPage from "@/components/SolutionPage";
+
+const AmazonConnect = () => <SolutionPage eyebrow="Amazon Connect solutions" title="Modernize your customer conversations." description="Design, implement and improve a scalable cloud contact center with Amazon Connect—aligned to your customer journey, agent workflow and business systems." capabilities={["Contact center architecture", "IVR and contact flows", "Routing and queue design", "CRM and business integrations", "Automation and reporting", "Optimization and support"]} outcomes={["Give customers a clearer, more consistent support experience.", "Help agents work from streamlined, purpose-built workflows.", "Create a flexible cloud foundation that can grow with the business.", "Connect conversations with the systems your teams already rely on."]} />;
+export default AmazonConnect;

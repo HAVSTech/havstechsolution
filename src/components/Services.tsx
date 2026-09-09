@@ -1,82 +1,116 @@
-import { 
-  Globe, 
-  Smartphone, 
-  Share2, 
-  Image, 
-  Search, 
-  Users, 
-  Monitor ,
-  CheckCircle
+import {
+  Headphones,
+  AudioLines,
+  Workflow,
+  Code2,
+  Globe,
+  UsersRound,
+  MonitorCog,
+  Users,
 } from "lucide-react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 
 const Services = () => {
   const services = [
     {
+      icon: Headphones,
+      title: "Amazon Connect Solutions",
+      description:
+        "Design, development, and implementation of scalable cloud contact center solutions using Amazon Connect, including contact flows, IVR, call routing, integrations, and optimization.",
+    },
+    {
+      icon: AudioLines,
+      title: "ElevenLabs Voice AI",
+      description:
+        "Build natural and intelligent voice experiences using ElevenLabs, including AI voice agents, conversational workflows, voice automation, and custom voice integrations.",
+    },
+    {
+      icon: Workflow,
+      title: "n8n Workflow Automation",
+      description:
+        "Design and implement intelligent n8n workflows that connect applications, automate repetitive processes, orchestrate data, and streamline business operations.",
+    },
+    {
+      icon: Code2,
+      title: "Custom Software Development",
+      description:
+        "Purpose-built software solutions designed around your business processes, requirements, and growth objectives—from concept and development to deployment.",
+    },
+    {
       icon: Globe,
-      title: "Website Development",
-      description: "Custom, responsive websites built with modern technologies to establish your digital presence."
+      title: "Website Design & Development",
+      description:
+        "Modern, responsive, and high-performance websites designed to strengthen your digital presence and deliver seamless user experiences across devices.",
     },
     {
-      icon: Smartphone,
-      title: "App Development",
-      description: "Native and cross-platform mobile applications that deliver exceptional user experiences."
+      icon: UsersRound,
+      title: "Technology Staff Augmentation",
+      description:
+        "Access skilled technology professionals to strengthen your existing teams, fill critical skill gaps, and scale development capabilities based on project requirements.",
     },
     {
-      icon: Share2,
-      title: "Social Media Management",
-      description: "Strategic social media campaigns to boost your brand visibility and engagement."
-    },
-    {
-      icon: Image,
-      title: "Poster Design",
-      description: "Creative and professional poster designs for marketing, events, and promotional campaigns."
-    },
-    {
-      icon: Search,
-      title: "SEO",
-      description: "Search engine optimization to improve your website's visibility and organic traffic."
+      icon: MonitorCog,
+      title: "IT Consulting & Integration",
+      description:
+        "Technology consulting and system integration services that help businesses select, connect, optimize, and implement solutions aligned with their operational goals.",
     },
     {
       icon: Users,
-      title: "Human Resources",
-      description: "HR consulting and management solutions to optimize your workforce and operations."
+      title: "HR Solutions",
+      description:
+        "Practical HR solutions supporting recruitment, talent management, workforce planning, and organizational needs to help businesses build and manage effective teams.",
     },
-    {
-      icon: Monitor,
-      title: "IT Consulting",
-      description: "Expert IT consulting to help you make informed technology decisions and strategies."
-    }
   ];
 
   return (
     <section id="services" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        {/* Section Header */}
         <div className="text-center mb-16">
+          <span className="inline-block text-sm font-semibold tracking-wider uppercase text-blue-600 mb-3">
+            What We Do
+          </span>
+
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Our Services
+            Technology & Business Solutions
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Comprehensive technology solutions tailored to meet your business needs
+
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            From cloud contact centers and AI-powered voice solutions to
+            workflow automation, custom software, talent solutions, and HR
+            support, we help businesses build the technology and teams they
+            need to grow.
           </p>
         </div>
 
+        {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => {
             const IconComponent = service.icon;
+
             return (
               <Card
                 key={index}
-                className="hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-0 shadow-md group"
+                className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-0 shadow-md bg-white"
               >
-                <CardHeader className="text-center">
-                  <div className="mx-auto w-16 h-16 bg-gradient-brand rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                <CardHeader className="text-center pb-4">
+                  <div className="mx-auto w-16 h-16 bg-gradient-brand rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                     <IconComponent className="h-8 w-8 text-white" />
                   </div>
+
                   <CardTitle className="text-xl font-semibold text-gray-900">
                     {service.title}
                   </CardTitle>
                 </CardHeader>
+
                 <CardContent>
                   <CardDescription className="text-center text-gray-600 leading-relaxed">
                     {service.description}
@@ -87,57 +121,89 @@ const Services = () => {
           })}
         </div>
       </div>
-      {/* How Our Service works */}
-      <section className="pt-10 pb-15 bg-gradient-section">
+
+      {/* How We Work */}
+      <section className="pt-24 pb-16 bg-gradient-section">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-foreground mb-8 text-center">How Our Service Works</h2>
-            
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div>
-                <h3 className="text-2xl font-semibold text-foreground mb-6">Comprehensive Business Transformation</h3>
-                <p className="text-muted-foreground mb-6 leading-relaxed">
-                  Our consulting methodology is built on decades of experience across diverse industries. We begin with 
-                  a thorough analysis of your current state, identify key opportunities, and develop a customized roadmap 
-                  for sustainable growth.
-                </p>
-                <p className="text-muted-foreground mb-6 leading-relaxed">
-                  What sets us apart is our hands-on approach to implementation. We don't just provide recommendations – 
-                  we work alongside your team to ensure successful execution and knowledge transfer.
-                </p>
-                
-              </div>
-              
-              <div className="space-y-6">
-                <Card className="border-border transition-transform transform hover:scale-105 hover:shadow-lg">
-                  <CardContent className="p-6">
-                    <h4 className="font-semibold text-foreground mb-2">Discovery & Assessment</h4>
-                    <p className="text-muted-foreground text-sm">
-                      Comprehensive evaluation of your current operations, challenges, and opportunities.
-                    </p>
-                  </CardContent>
-                </Card>
+          <div className="max-w-5xl mx-auto">
 
-                <Card className="border-border transition-transform transform hover:scale-105 hover:shadow-lg">
-                  <CardContent className="p-6">
-                    <h4 className="font-semibold text-foreground mb-2">Strategy Development</h4>
-                    <p className="text-muted-foreground text-sm">
-                      Custom strategic plan with clear objectives, timelines, and success metrics.
-                    </p>
-                  </CardContent>
-                </Card>
+            {/* Approach Header */}
+            <div className="text-center mb-12">
+              <span className="inline-block text-sm font-semibold tracking-wider uppercase text-blue-600 mb-3">
+                Our Approach
+              </span>
 
-                <Card className="border-border transition-transform transform hover:scale-105 hover:shadow-lg">
-                  <CardContent className="p-6">
-                    <h4 className="font-semibold text-foreground mb-2">Implementation Support</h4>
-                    <p className="text-muted-foreground text-sm">
-                      Hands-on guidance throughout execution with regular progress monitoring.
-                    </p>
-                  </CardContent>
-                </Card>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                From Requirement to Real-World Solution
+              </h2>
 
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                We combine technical expertise with a clear understanding of
+                your business objectives to deliver solutions that are
+                practical, scalable, and built for long-term value.
+              </p>
+            </div>
 
-              </div>
+            {/* Approach Steps */}
+            <div className="grid md:grid-cols-3 gap-8">
+
+              {/* Step 1 */}
+              <Card className="border-border transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                <CardContent className="p-8">
+                  <div className="text-4xl font-bold text-blue-600 mb-5">
+                    01
+                  </div>
+
+                  <h3 className="text-xl font-semibold text-foreground mb-3">
+                    Understand
+                  </h3>
+
+                  <p className="text-muted-foreground leading-relaxed">
+                    We understand your business requirements, existing
+                    systems, challenges, and desired outcomes before defining
+                    the right solution.
+                  </p>
+                </CardContent>
+              </Card>
+
+              {/* Step 2 */}
+              <Card className="border-border transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                <CardContent className="p-8">
+                  <div className="text-4xl font-bold text-blue-600 mb-5">
+                    02
+                  </div>
+
+                  <h3 className="text-xl font-semibold text-foreground mb-3">
+                    Build
+                  </h3>
+
+                  <p className="text-muted-foreground leading-relaxed">
+                    Our team designs and develops the solution using the
+                    technologies best suited to your project and business
+                    needs.
+                  </p>
+                </CardContent>
+              </Card>
+
+              {/* Step 3 */}
+              <Card className="border-border transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                <CardContent className="p-8">
+                  <div className="text-4xl font-bold text-blue-600 mb-5">
+                    03
+                  </div>
+
+                  <h3 className="text-xl font-semibold text-foreground mb-3">
+                    Deliver & Support
+                  </h3>
+
+                  <p className="text-muted-foreground leading-relaxed">
+                    We support implementation, testing, optimization, and
+                    ongoing improvements to ensure the solution continues to
+                    deliver value.
+                  </p>
+                </CardContent>
+              </Card>
+
             </div>
           </div>
         </div>

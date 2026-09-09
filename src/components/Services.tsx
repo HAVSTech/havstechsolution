@@ -7,207 +7,70 @@ import {
   UsersRound,
   MonitorCog,
   Users,
+  ArrowUpRight,
 } from "lucide-react";
-
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const Services = () => {
   const services = [
-    {
-      icon: Headphones,
-      title: "Amazon Connect Solutions",
-      description:
-        "Design, development, and implementation of scalable cloud contact center solutions using Amazon Connect, including contact flows, IVR, call routing, integrations, and optimization.",
-    },
-    {
-      icon: AudioLines,
-      title: "ElevenLabs Voice AI",
-      description:
-        "Build natural and intelligent voice experiences using ElevenLabs, including AI voice agents, conversational workflows, voice automation, and custom voice integrations.",
-    },
-    {
-      icon: Workflow,
-      title: "n8n Workflow Automation",
-      description:
-        "Design and implement intelligent n8n workflows that connect applications, automate repetitive processes, orchestrate data, and streamline business operations.",
-    },
-    {
-      icon: Code2,
-      title: "Custom Software Development",
-      description:
-        "Purpose-built software solutions designed around your business processes, requirements, and growth objectives—from concept and development to deployment.",
-    },
-    {
-      icon: Globe,
-      title: "Website Design & Development",
-      description:
-        "Modern, responsive, and high-performance websites designed to strengthen your digital presence and deliver seamless user experiences across devices.",
-    },
-    {
-      icon: UsersRound,
-      title: "Technology Staff Augmentation",
-      description:
-        "Access skilled technology professionals to strengthen your existing teams, fill critical skill gaps, and scale development capabilities based on project requirements.",
-    },
-    {
-      icon: MonitorCog,
-      title: "IT Consulting & Integration",
-      description:
-        "Technology consulting and system integration services that help businesses select, connect, optimize, and implement solutions aligned with their operational goals.",
-    },
-    {
-      icon: Users,
-      title: "HR Solutions",
-      description:
-        "Practical HR solutions supporting recruitment, talent management, workforce planning, and organizational needs to help businesses build and manage effective teams.",
-    },
+    { icon: Headphones, number: "01", title: "Amazon Connect", description: "Cloud contact center solutions covering IVR, contact flows, routing, integrations, automation, and optimization." },
+    { icon: AudioLines, number: "02", title: "ElevenLabs Voice AI", description: "Natural AI voice experiences, conversational agents, voice automation, and custom integrations." },
+    { icon: Workflow, number: "03", title: "n8n Automation", description: "Connected workflows that automate repetitive operations, move data, and integrate your business systems." },
+    { icon: Code2, number: "04", title: "Custom Software", description: "Purpose-built applications designed around your processes, users, requirements, and growth plans." },
+    { icon: Globe, number: "05", title: "Web Development", description: "Fast, responsive websites and web applications designed for modern customer experiences." },
+    { icon: UsersRound, number: "06", title: "Technology Talent", description: "Flexible access to skilled technology professionals to strengthen teams and accelerate delivery." },
+    { icon: MonitorCog, number: "07", title: "IT Consulting", description: "Technology strategy and integration support that connects the right systems to the right outcomes." },
+    { icon: Users, number: "08", title: "HR Solutions", description: "Recruitment, workforce planning, talent management, and practical HR support for growing organizations." },
   ];
 
   return (
-    <section id="services" className="py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-        {/* Section Header */}
-        <div className="text-center mb-16">
-          <span className="inline-block text-sm font-semibold tracking-wider uppercase text-blue-600 mb-3">
-            What We Do
-          </span>
-
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Technology & Business Solutions
+    <section id="services" className="relative overflow-hidden bg-slate-50 py-24 sm:py-28">
+      <div className="absolute left-0 top-20 h-72 w-72 rounded-full bg-blue-100/60 blur-3xl" />
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="max-w-3xl">
+          <p className="mb-4 text-sm font-bold uppercase tracking-[0.2em] text-blue-600">What we build</p>
+          <h2 className="text-4xl font-semibold tracking-tight text-slate-950 sm:text-5xl">
+            One technology partner for your next stage of growth.
           </h2>
-
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            From cloud contact centers and AI-powered voice solutions to
-            workflow automation, custom software, talent solutions, and HR
-            support, we help businesses build the technology and teams they
-            need to grow.
+          <p className="mt-6 text-lg leading-8 text-slate-600">
+            Specialized capabilities across cloud, AI, automation, software, web, and talent—brought together around the problems your business actually needs to solve.
           </p>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => {
-            const IconComponent = service.icon;
-
+        <div className="mt-14 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+          {services.map((service) => {
+            const Icon = service.icon;
             return (
-              <Card
-                key={index}
-                className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-0 shadow-md bg-white"
-              >
-                <CardHeader className="text-center pb-4">
-                  <div className="mx-auto w-16 h-16 bg-gradient-brand rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <IconComponent className="h-8 w-8 text-white" />
+              <Card key={service.number} className="group relative overflow-hidden rounded-3xl border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-900/5">
+                <CardHeader className="pb-3">
+                  <div className="mb-8 flex items-start justify-between">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-50 text-blue-600 transition-colors group-hover:bg-blue-600 group-hover:text-white">
+                      <Icon className="h-6 w-6" />
+                    </div>
+                    <span className="text-xs font-bold tracking-widest text-slate-300">{service.number}</span>
                   </div>
-
-                  <CardTitle className="text-xl font-semibold text-gray-900">
-                    {service.title}
-                  </CardTitle>
+                  <CardTitle className="text-xl text-slate-950">{service.title}</CardTitle>
                 </CardHeader>
-
                 <CardContent>
-                  <CardDescription className="text-center text-gray-600 leading-relaxed">
-                    {service.description}
-                  </CardDescription>
+                  <p className="text-sm leading-6 text-slate-600">{service.description}</p>
+                  <div className="mt-7 flex items-center gap-1 text-sm font-semibold text-blue-600 opacity-0 transition-opacity group-hover:opacity-100">
+                    Explore capability <ArrowUpRight className="h-4 w-4" />
+                  </div>
                 </CardContent>
               </Card>
             );
           })}
         </div>
-      </div>
 
-      {/* How We Work */}
-      <section className="pt-24 pb-16 bg-gradient-section">
-        <div className="container mx-auto px-6">
-          <div className="max-w-5xl mx-auto">
-
-            {/* Approach Header */}
-            <div className="text-center mb-12">
-              <span className="inline-block text-sm font-semibold tracking-wider uppercase text-blue-600 mb-3">
-                Our Approach
-              </span>
-
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-                From Requirement to Real-World Solution
-              </h2>
-
-              <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                We combine technical expertise with a clear understanding of
-                your business objectives to deliver solutions that are
-                practical, scalable, and built for long-term value.
-              </p>
-            </div>
-
-            {/* Approach Steps */}
-            <div className="grid md:grid-cols-3 gap-8">
-
-              {/* Step 1 */}
-              <Card className="border-border transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-                <CardContent className="p-8">
-                  <div className="text-4xl font-bold text-blue-600 mb-5">
-                    01
-                  </div>
-
-                  <h3 className="text-xl font-semibold text-foreground mb-3">
-                    Understand
-                  </h3>
-
-                  <p className="text-muted-foreground leading-relaxed">
-                    We understand your business requirements, existing
-                    systems, challenges, and desired outcomes before defining
-                    the right solution.
-                  </p>
-                </CardContent>
-              </Card>
-
-              {/* Step 2 */}
-              <Card className="border-border transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-                <CardContent className="p-8">
-                  <div className="text-4xl font-bold text-blue-600 mb-5">
-                    02
-                  </div>
-
-                  <h3 className="text-xl font-semibold text-foreground mb-3">
-                    Build
-                  </h3>
-
-                  <p className="text-muted-foreground leading-relaxed">
-                    Our team designs and develops the solution using the
-                    technologies best suited to your project and business
-                    needs.
-                  </p>
-                </CardContent>
-              </Card>
-
-              {/* Step 3 */}
-              <Card className="border-border transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-                <CardContent className="p-8">
-                  <div className="text-4xl font-bold text-blue-600 mb-5">
-                    03
-                  </div>
-
-                  <h3 className="text-xl font-semibold text-foreground mb-3">
-                    Deliver & Support
-                  </h3>
-
-                  <p className="text-muted-foreground leading-relaxed">
-                    We support implementation, testing, optimization, and
-                    ongoing improvements to ensure the solution continues to
-                    deliver value.
-                  </p>
-                </CardContent>
-              </Card>
-
-            </div>
+        <div className="mt-16 overflow-hidden rounded-[2rem] bg-[#07111f] p-8 text-white sm:p-10 lg:flex lg:items-center lg:justify-between">
+          <div className="max-w-2xl">
+            <p className="text-sm font-bold uppercase tracking-[0.2em] text-blue-300">How we work</p>
+            <h3 className="mt-3 text-3xl font-semibold tracking-tight">Understand. Build. Improve.</h3>
+            <p className="mt-3 leading-7 text-slate-400">We start with the business problem, choose the right technology, build with purpose, and stay close through implementation and improvement.</p>
           </div>
+          <a href="#contact" className="mt-7 inline-flex shrink-0 items-center gap-2 rounded-full bg-white px-6 py-3 font-semibold text-slate-950 transition hover:bg-blue-50 lg:mt-0">Talk to our team <ArrowUpRight className="h-4 w-4" /></a>
         </div>
-      </section>
+      </div>
     </section>
   );
 };

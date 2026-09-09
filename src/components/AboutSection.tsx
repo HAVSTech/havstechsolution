@@ -1,136 +1,60 @@
-import aboutImage from '@/assets/about-image.jpg';
-import { CheckCircle } from "lucide-react";
+import aboutImage from "@/assets/about-image.jpg";
+import { ArrowUpRight, CheckCircle2 } from "lucide-react";
 
 const AboutSection = () => {
-    const highlights = [
-    "Expert team with 2+ years of experience",
-    "Cutting-edge technology solutions",
-    "24/7 customer support",
-    "Proven track record of success"
+  const highlights = [
+    "Business-first technology decisions",
+    "Modern cloud, AI and automation expertise",
+    "Scalable solutions built for long-term use",
+    "Hands-on implementation and support",
   ];
+
   return (
-<section id="about" className="pt-9 pb-20 bg-muted/30">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Image */}
-          <div className="order-2 lg:order-1">
-            <div className="relative">
-              <img
-                src={aboutImage}
-                alt="HAVS Tech Solutions team collaboration"
-                className="w-full h-[500px] object-cover rounded-2xl shadow-card"
-              />
-              <div className="absolute inset-0 bg-primary/10 rounded-2xl"></div>
+    <section id="about" className="bg-white py-24 sm:py-28">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="grid items-center gap-14 lg:grid-cols-[.9fr_1.1fr]">
+          <div className="relative">
+            <div className="absolute -inset-4 rounded-[2rem] bg-blue-100/70 blur-2xl" />
+            <img src={aboutImage} alt="HAVS Tech Solutions" className="relative h-[460px] w-full rounded-[2rem] object-cover shadow-2xl" />
+            <div className="absolute bottom-6 left-6 rounded-2xl border border-white/30 bg-[#07111f]/90 px-5 py-4 text-white backdrop-blur-md">
+              <p className="text-2xl font-semibold">Built for impact</p>
+              <p className="mt-1 text-sm text-slate-300">Technology that solves real problems.</p>
             </div>
           </div>
 
-          {/* Content */}
-          <div className="order-1 lg:order-2">
-            <div className="max-w-xl">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                About HAVS Tech Solutions
-              </h2>
-              
-              <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
-                <p>
-                  At HAVS Tech Solutions, we are passionate about transforming businesses 
-                  through innovative technology. Founded with a vision to bridge the gap 
-                  between cutting-edge technology and practical business solutions, we have 
-                  become a trusted partner for companies seeking digital excellence.
-                </p>
-                
-                <p>
-                  Our team of experienced professionals brings together expertise in web 
-                  development, mobile applications, digital marketing, and strategic consulting. 
-                  We pride ourselves on delivering solutions that not only meet current needs 
-                  but also scale with your business growth.
-                </p>
-                
-                {/* <p>
-                  With a client-first approach and commitment to quality, we've successfully 
-                  helped numerous businesses establish their digital presence, streamline 
-                  operations, and achieve sustainable growth in today's competitive marketplace.
-                </p> */}
-                  <div className="space-y-4">
-              {highlights.map((highlight, index) => (
-                <div key={index} className="flex items-center">
-                  <CheckCircle className="h-6 w-6 text-primary-blue mr-3 flex-shrink-0" />
-                  <span className="text-gray-700">{highlight}</span>
+          <div>
+            <p className="text-sm font-bold uppercase tracking-[0.2em] text-blue-600">About HAVS</p>
+            <h2 className="mt-4 text-4xl font-semibold tracking-tight text-slate-950 sm:text-5xl">Technology should make business simpler, not more complicated.</h2>
+            <div className="mt-7 space-y-5 text-lg leading-8 text-slate-600">
+              <p>HAVS Tech Solutions partners with organizations to turn business requirements into practical digital solutions. We bring together cloud contact centers, AI voice, workflow automation, custom software, web development, and technology talent.</p>
+              <p>Our approach is deliberately hands-on: understand the outcome, choose the right technology, build with clarity, and support the solution beyond launch.</p>
+            </div>
+
+            <div className="mt-8 grid gap-4 sm:grid-cols-2">
+              {highlights.map((highlight) => (
+                <div key={highlight} className="flex items-start gap-3 text-sm font-medium text-slate-700">
+                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-blue-600" />
+                  {highlight}
                 </div>
               ))}
             </div>
-              </div>
 
-              {/* Stats */}
-              <div className="grid grid-cols-3 gap-8 mt-12">
-                <div className="text-center">
-                  <div className="text-3xl font-bold mb-2" style={{ color: "#2094F3" }}>3+</div>
-                  <div className="text-sm text-muted-foreground">Projects Completed</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold mb-2" style={{ color: "#2094F3" }}>2+</div>
-                  <div className="text-sm text-muted-foreground">Happy Clients</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold mb-2" style={{ color: "#2094F3" }}>1+</div>
-                  <div className="text-sm text-muted-foreground">Years Experience</div>
-                </div>
-              </div>
-            </div>
+            <a href="#contact" className="mt-9 inline-flex items-center gap-2 font-semibold text-blue-600 hover:text-blue-700">Let's discuss your requirement <ArrowUpRight className="h-4 w-4" /></a>
           </div>
         </div>
-        {/* Process Steps */}
-      <section className="pt-20 pb-10">
 
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-foreground mb-4">Our Proven Process</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              A systematic approach that ensures consistent results and exceptional outcomes
-            </p>
-          </div>
-          
-          <div className="max-w-4xl mx-auto">
-            <div className="grid md:grid-cols-4 gap-8">
-              {[
-                {
-                  step: "01",
-                  title: "Initial Consultation",
-                  description: "Free discovery call to understand your challenges and objectives"
-                },
-                {
-                  step: "02", 
-                  title: "Detailed Analysis",
-                  description: "Comprehensive assessment of current state and opportunity mapping"
-                },
-                {
-                  step: "03",
-                  title: "Strategic Planning",
-                  description: "Development of customized solution and implementation roadmap"
-                },
-                {
-                  step: "04",
-                  title: "Execution & Support",
-                  description: "Implementation guidance with ongoing monitoring and optimization"
-                }
-              ].map((process, index) => (
-                <div key={index} className="text-center group">
-                  <div className="relative">
-                    <div className="w-16 h-16 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                      {process.step}
-                    </div>
-                    {index < 3 && (
-                      <div className="hidden md:block absolute top-8 left-full w-full h-0.5 bg-border transform translate-x-2" />
-                    )}
-                  </div>
-                  <h3 className="text-lg font-semibold text-foreground mb-2">{process.title}</h3>
-                  <p className="text-muted-foreground text-sm">{process.description}</p>
-                </div>
-              ))}
+        <div className="mt-24 grid overflow-hidden rounded-[2rem] bg-slate-50 sm:grid-cols-3">
+          {[
+            { value: "Cloud", label: "Modern infrastructure & contact centers" },
+            { value: "AI", label: "Voice experiences & intelligent workflows" },
+            { value: "Build", label: "Software, websites & digital products" },
+          ].map((item) => (
+            <div key={item.value} className="border-b border-slate-200 p-8 last:border-0 sm:border-b-0 sm:border-r sm:last:border-r-0">
+              <p className="text-3xl font-semibold text-slate-950">{item.value}</p>
+              <p className="mt-2 text-sm leading-6 text-slate-500">{item.label}</p>
             </div>
-          </div>
+          ))}
         </div>
-      </section>
       </div>
     </section>
   );

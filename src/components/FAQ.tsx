@@ -18,9 +18,9 @@ export default function FAQ() {
           <h2 className="mt-4 text-4xl font-semibold tracking-tight text-slate-950">Questions, answered clearly.</h2>
           <p className="mx-auto mt-4 max-w-2xl text-slate-600">A few practical answers before we start working together.</p>
         </div>
-        <Accordion type="single" collapsible className="space-y-3">
+        <Accordion type="single" collapsible className="space-y-2">
           {faqs.map(([question, answer], index) => (
-            <AccordionItem key={question} value={`item-${index + 1}`} className="rounded-2xl border border-slate-200 px-6 data-[state=open]:border-blue-200 data-[state=open]:bg-blue-50/30">
+            <AccordionItem key={question} value={`item-${index + 1}`} className="rounded-2xl border border-slate-200 bg-white px-6 transition data-[state=open]:border-blue-200 data-[state=open]:bg-blue-50/30">
               <AccordionTrigger className="py-6 text-left font-semibold text-slate-900 hover:no-underline">{question}</AccordionTrigger>
               <AccordionContent className="pb-6 leading-7 text-slate-600">{answer}</AccordionContent>
             </AccordionItem>

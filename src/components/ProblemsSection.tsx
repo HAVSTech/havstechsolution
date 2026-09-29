@@ -32,11 +32,11 @@ const ProblemsSection = () => (
         <p className="mt-5 text-lg leading-8 text-slate-600">Start with the challenge, not the technology. We help identify practical ways to improve customer experience, automate operations and build what your team actually needs.</p>
       </div>
 
-      <div className="mt-14 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+      <div className="mt-14 grid gap-0 overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-[0_22px_70px_-42px_rgba(15,23,42,0.30)] md:grid-cols-2 lg:grid-cols-4">
         {problems.map((problem) => {
           const Icon = problem.icon;
           return (
-            <article key={problem.title} className="group rounded-3xl border border-slate-200 bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-900/5">
+            <article key={problem.title} className={"group min-h-[255px] p-7 transition duration-300 hover:bg-slate-50 " + (problem.title === problems[0].title ? "" : "border-t border-slate-200 md:border-t-0 md:border-l " ) + "lg:" + "" }>
               <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors">
                 <Icon className="h-6 w-6" />
               </div>

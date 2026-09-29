@@ -52,13 +52,13 @@ const Contact = () => {
           <p className="mt-5 text-lg leading-8 text-slate-600">Share what you're trying to achieve. We'll use the conversation to understand your current process, identify opportunities and shape a practical technology approach.</p>
         </div>
 
-        <div className="grid gap-8 lg:grid-cols-[1.1fr_.9fr]">
-          <Card className="rounded-[2rem] border-slate-200 bg-white shadow-xl shadow-slate-900/5">
+        <div className="grid gap-7 lg:grid-cols-[1.08fr_.92fr]">
+          <Card className="rounded-3xl border-slate-200 bg-white shadow-[0_24px_70px_-42px_rgba(15,23,42,0.25)]">
             <CardHeader className="p-7 sm:p-9"><CardTitle className="text-2xl text-slate-950">Tell us about your requirement</CardTitle></CardHeader>
             <CardContent className="p-7 pt-0 sm:p-9 sm:pt-0"><ContactForm /></CardContent>
           </Card>
 
-          <div className="rounded-[2rem] bg-[#07111f] p-8 text-white sm:p-10">
+          <div className="rounded-3xl border border-white/10 bg-[#07111f] p-8 text-white shadow-[0_24px_70px_-40px_rgba(2,6,23,0.55)] sm:p-10">
             <p className="text-sm font-bold uppercase tracking-[0.2em] text-blue-300">A simple first step</p>
             <h3 className="mt-5 text-3xl font-semibold tracking-tight">Let's understand the problem before choosing the technology.</h3>
             <div className="mt-8 space-y-5">

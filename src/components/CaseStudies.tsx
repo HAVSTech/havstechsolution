@@ -29,11 +29,11 @@ const CaseStudies = () => (
         <a href="#contact" className="inline-flex shrink-0 items-center gap-2 font-semibold text-blue-600">Discuss a similar project <ArrowUpRight className="h-4 w-4" /></a>
       </div>
 
-      <div className="mt-14 grid gap-6 lg:grid-cols-2">
+      <div className="mt-14 grid gap-5 lg:grid-cols-2">
         {cases.map((item) => {
           const Icon = item.icon;
           return (
-            <article key={item.title} className="rounded-[2rem] border border-slate-200 bg-slate-50 p-7 sm:p-9">
+            <article key={item.title} className="group rounded-3xl border border-slate-200 bg-slate-50 p-7 transition duration-300 hover:border-blue-200 hover:bg-white hover:shadow-[0_22px_60px_-38px_rgba(30,64,175,0.45)] sm:p-9">
               <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-600 text-white"><Icon className="h-6 w-6" /></div>
               <p className="mt-8 text-xs font-bold uppercase tracking-[0.2em] text-blue-600">{item.eyebrow}</p>
               <h3 className="mt-3 text-2xl font-semibold tracking-tight text-slate-950">{item.title}</h3>

@@ -23,7 +23,7 @@ const SolutionPackages = () => (
 
       <div className="mt-14 grid gap-5 lg:grid-cols-3">
         {packages.map((item, index) => (
-          <article key={item.title} className={`rounded-[2rem] border bg-white p-7 sm:p-8 ${index === 1 ? "border-blue-300 shadow-xl shadow-blue-900/10" : "border-slate-200 shadow-sm"}`}>
+          <article key={item.title} className={`rounded-3xl border bg-white p-7 transition duration-300 hover:-translate-y-0.5 sm:p-8 ${index === 1 ? "border-blue-300 shadow-xl shadow-blue-900/10" : "border-slate-200 shadow-sm hover:border-blue-200 hover:shadow-lg"}`}>
             {index === 1 && <span className="rounded-full bg-blue-50 px-3 py-1 text-xs font-bold text-blue-600">Popular starting point</span>}
             <h3 className={`${index === 1 ? "mt-5" : "mt-1"} text-2xl font-semibold text-slate-950`}>{item.title}</h3>
             <p className="mt-3 min-h-[72px] text-sm leading-6 text-slate-600">{item.text}</p>
@@ -35,7 +35,7 @@ const SolutionPackages = () => (
         ))}
       </div>
 
-      <div className="mt-20 rounded-[2rem] bg-[#07111f] p-8 text-white sm:p-10">
+      <div className="mt-20 rounded-3xl border border-white/10 bg-[#07111f] p-8 text-white shadow-[0_24px_70px_-40px_rgba(2,6,23,0.55)] sm:p-10">
         <div className="max-w-3xl">
           <p className="text-sm font-bold uppercase tracking-[0.2em] text-blue-300">HAVS Care</p>
           <h3 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">Keep your technology improving after launch.</h3>
